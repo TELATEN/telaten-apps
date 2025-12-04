@@ -1,123 +1,132 @@
 # Telaten Apps
 
-Monorepo untuk aplikasi Telaten (Backend, Client/Frontend, dan API Docs).
+Monorepo for Telaten applications (Backend, Client/Frontend, and API Docs).
 
-## 📂 Struktur Repository
+## 📂 Repository Structure
 
 - **telaten-backend**: Backend service (Python/FastAPI).
 - **telaten-client**: Frontend application (Next.js).
-- **telaten-docs-api**: Dokumentasi API (Bruno Collection).
+- **telaten-docs-api**: API Documentation (Bruno Collection).
 
-## 🚀 Cara Clone Repository (PENTING)
+## 🚀 Cloning the Repository (IMPORTANT)
 
-Karena repository ini menggunakan **Git Submodules**, Anda harus meng-clone dengan cara khusus untuk memastikan semua folder terisi.
+Since this repository uses **Git Submodules**, you must clone it in a specific way to ensure all folders are populated.
 
-### Opsi 1: Clone dari awal
-Gunakan flag `--recurse-submodules` saat clone:
+### Option 1: Fresh Clone
+Use the `--recurse-submodules` flag when cloning:
 ```bash
 git clone --recurse-submodules https://github.com/username/telaten-apps.git
 cd telaten-apps
 ```
 
-### Opsi 2: Jika sudah terlanjur clone biasa
-Jika folder submodule kosong, jalankan perintah berikut di root project:
+### Option 2: If already cloned normally
+If the submodule folders are empty, run the following command in the project root:
 ```bash
 git submodule update --init --recursive
 ```
 
 ---
 
-## 🛠️ Setup & Menjalankan Aplikasi
+## 🛠️ Setup & Running the Application
 
 ### 1. Backend (`telaten-backend`)
 
-Backend dibangun menggunakan Python (FastAPI).
+The backend is built using Python (FastAPI).
 
 **Prerequisites:**
 - Python >= 3.12
-- PostgreSQL (Pastikan database sudah berjalan)
+- PostgreSQL (Ensure the database is running)
 
-**Langkah-langkah:**
+**Steps:**
 
-1. Masuk ke direktori backend:
+1. Navigate to the backend directory:
    ```bash
    cd telaten-backend
    ```
 
-2. Buat file `.env`:
+2. Create the `.env` file:
    ```bash
    cp .env.example .env
    ```
-   *Sesuaikan konfigurasi di dalam `.env` (terutama `DATABASE_URL` dan `SECRET_KEY`).*
+   *Adjust the configuration in `.env` (especially `DATABASE_URL` and `SECRET_KEY`).*
 
 3. Install dependencies:
-   Disarankan menggunakan `uv` (karena ada `uv.lock`), tapi `pip` juga bisa.
+   Using `uv` is recommended (as `uv.lock` is present), but `pip` works as well.
    
-   **Menggunakan pip:**
+   **Using uv (Recommended):**
+   ```bash
+   uv sync
+   ```
+
+   **Using pip:**
    ```bash
    pip install .
-   # Atau jika ingin mode editable (development)
+   # Or for editable mode (development)
    pip install -e .
    ```
 
-4. Jalankan aplikasi:
+4. Run the application:
    ```bash
+   # If using uv
+   uv run python run.py
+   
+   # If using standard python/pip
    python run.py
    ```
-   Server akan berjalan di `http://localhost:8000`.
+   The server will run at `http://localhost:8000`.
 
 ---
 
 ### 2. Frontend (`telaten-client`)
 
-Frontend dibangun menggunakan Next.js.
+The frontend is built using Next.js.
 
 **Prerequisites:**
 - Node.js
-- Bun (Disarankan, karena ada `bun.lock`) atau npm
+- Bun (Recommended, as `bun.lock` is present) or npm
 
-**Langkah-langkah:**
+**Steps:**
 
-1. Masuk ke direktori client:
+1. Navigate to the client directory:
    ```bash
    cd telaten-client
    ```
 
-2. Buat file `.env.local`:
+2. Create the `.env.local` file:
    ```bash
    cp .env.example .env.local
    ```
-   *Isi `NEXT_PUBLIC_API_BASE_URL` dengan URL backend (default: `http://localhost:8000/api/v1`).*
+   *Set `NEXT_PUBLIC_API_BASE_URL` to the backend URL (default: `http://localhost:8000/api/v1`).*
 
 3. Install dependencies:
    ```bash
    bun install
-   # atau
+   # or
    npm install
    ```
 
-4. Jalankan mode development:
+4. Run in development mode:
    ```bash
    bun dev
-   # atau
+   # or
    npm run dev
    ```
-   Aplikasi akan berjalan di `http://localhost:3000`.
+   The application will run at `http://localhost:3000`.
 
 ---
 
 ### 3. API Documentation (`telaten-docs-api`)
 
-Dokumentasi API dikelola menggunakan **Bruno**.
+API documentation is managed using **Bruno**.
 
-1. Install aplikasi [Bruno](https://www.usebruno.com/).
-2. Buka Bruno, pilih **Open Collection**.
-3. Arahkan ke folder `telaten-docs-api`.
-4. Anda bisa langsung mencoba endpoint-endpoint yang tersedia (pastikan Environment di Bruno diset ke `local`).
+1. Install [Bruno](https://www.usebruno.com/).
+2. Open Bruno, select **Open Collection**.
+3. Navigate to the `telaten-docs-api` folder.
+4. You can explore and test the available endpoints (make sure the Environment in Bruno is set to `local`).
 
-## 🐳 Docker (Opsional)
+## 🐳 Docker (Optional)
 
-Untuk backend, terdapat support Docker.
+Docker support is available for the backend.
 
 ```bash
 cd telaten-backend
