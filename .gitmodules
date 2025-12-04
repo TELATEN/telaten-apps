@@ -1,0 +1,9 @@
+[submodule "telaten-client"]
+	path = telaten-client
+	url = https://github.com/TELATEN/telaten-client.git
+[submodule "telaten-backend"]
+	path = telaten-backend
+	url = https://github.com/TELATEN/telaten-backend.git
+[submodule "telaten-docs-api"]
+	path = telaten-docs-api
+	url = https://github.com/TELATEN/telaten-docs-api.git
