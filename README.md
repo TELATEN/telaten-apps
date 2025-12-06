@@ -245,17 +245,9 @@ brew install bruno  # macOS
 
 <div align="center">
 
-### 🏠 Landing Page
+### 🏠 Demo
 
-![Landing Page](preview/landing.png)
-
-### 🏆 Leaderboard System
-
-![Leaderboard](preview/leaderboard.png)
-
-### ✅ Task Management Demo
-
-![Task Management](preview/doing_task.gif)
+<img src="preview/demo.gif" width="300" alt="Mobile Experience" />
 
 ### 📱 Mobile Experience
 
