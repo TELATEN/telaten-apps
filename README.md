@@ -245,9 +245,9 @@ brew install bruno  # macOS
 
 <div align="center">
 
-### 🏠 Demo
+### 🖥️ Desktop Experience
 
-<img src="preview/demo.gif" width="300" alt="Mobile Experience" />
+<img src="preview/demo.gif" alt="Desktop Experience" />
 
 ### 📱 Mobile Experience
 
