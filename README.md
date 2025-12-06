@@ -153,7 +153,11 @@ API documentation is managed using **Bruno**.
 
 ### Demo Doing Task
 
-![Demo Doing Task](preview/doing_task.mov)
+![Demo Doing Task](preview/doing_task.gif)
+
+### Mobile Preview
+
+![Mobile Preview](preview/mobile.gif)
 
 ## 🐳 Docker (Optional)
 
