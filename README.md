@@ -157,7 +157,9 @@ API documentation is managed using **Bruno**.
 
 ### Mobile Preview
 
-![Mobile Preview](preview/mobile.gif)
+<div align="center">
+  <img src="preview/mobile.gif" width="400" />
+</div>
 
 ## 🐳 Docker (Optional)
 
