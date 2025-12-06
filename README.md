@@ -141,6 +141,20 @@ API documentation is managed using **Bruno**.
 3. Navigate to the `telaten-docs-api` folder.
 4. You can explore and test the available endpoints (make sure the Environment in Bruno is set to `local`).
 
+## 👀 Preview
+
+### Landing Page
+
+![Landing Page](preview/landing.png)
+
+### Leader board
+
+![Leader board](preview/leaderboard.png)
+
+### Demo Doing Task
+
+![Demo Doing Task](preview/doing_task.mov)
+
 ## 🐳 Docker (Optional)
 
 Docker support is available for the backend.
